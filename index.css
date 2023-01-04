@@ -1,0 +1,411 @@
+@font-face {
+  font-family: 'Pribambas';
+  src: url('fonts/Pribambas-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(15vh, auto) minmax(70vh, auto) minmax(15vh, auto); 
+}
+
+.blur-window {
+  background-color: rgba(155, 161, 161, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.9;
+}
+
+.question-form-container {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 1200px;
+  height: 30vh;
+  background-color: #383a3c;
+  transform: translate(-50%, -50%);
+}
+
+.question-text {
+  font-family: 'Pribambas';
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin-right: 10px; 
+}
+
+.question-btn {
+  padding: 4px;
+  font-family: 'Pribambas';
+  font-size: 1rem;
+}
+
+.question-input {   
+  height: 1.3rem;
+  border: none;
+  outline: none;
+  padding: 0 3px;
+  padding: 13px;
+  font-family: 'Pribambas';
+  font-size: 1rem;
+}
+
+.up-header-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: #1D1D1D;
+}
+
+.down-header-container {  
+  width: 100%;
+  height: 50%;
+  background-color: #2A2A2A;
+  display: flex;
+  justify-content: center;
+}
+
+.up-header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.navigation {
+  height: 100%;
+  display: flex;
+}
+
+.logo {
+  margin: 0 10px; 
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Pribambas';
+}
+
+.btn-current-container,
+.btn-forecast-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;  
+}
+
+.checked {
+  background-color: #2A2A2A;
+}
+
+.btn-header { 
+  background-color: transparent;
+  color: #9BA1A1;
+  border: none;
+  transition:all;
+  transition-duration: 500ms;
+  text-align: center;
+  font-family: 'Pribambas';  
+}
+
+.btn-header:hover {
+  color: #b9dc0c; 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.down-header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  align-items: center;
+}
+
+.input {
+  font-family: 'Pribambas';
+  margin-left: 10px;
+  width: 100%;
+  height: 50%;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 0 3px;  
+}
+
+.button-submit {
+  width: 50px;
+  height: 50%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Pribambas';
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.button-submit {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #9BA1A1;
+}
+
+.content-container {
+  height: 100%;
+  background-image: url(images/sky.jpg);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper-current-weather {
+  height: 80%;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 15% 85%; 
+  margin: 0 10px;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80%;
+  box-shadow: 2px 5px 14px 1px;
+  border-radius: 5px;
+}
+
+.date-box {
+  padding: 10px 20px;
+  width: 100%;
+  font-family: 'Pribambas';
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle-content {
+  width: 100%;  
+  overflow-x: hidden;  
+}
+
+.middle-content-box {
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pribambas';
+  font-size: 2rem;
+  position: relative;
+  opacity: 0.7;
+  transition: all;
+  transition-duration: 500ms;
+}
+
+.middle-content-box:hover {
+  transform: scale(1.2);
+  background-color: #9BA1A1;
+  opacity: 0.4;
+}
+
+.svg-content {
+  margin-top: 10px;
+  margin-right: 5px;
+  display: none;
+}
+
+.middle-content-box:first-child {
+  border-top-left-radius: 5px;
+}
+
+.middle-content-box:last-child {
+  border-top-right-radius: 5px;
+}
+
+.down-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;  
+}
+
+.card {
+  font-size: 1.5rem;
+  font-family: 'Pribambas';
+  background-color: transparent;
+  padding: 0 10px 10px;
+  border-radius: 5px;
+  margin: 1px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.content-forecast {
+  width: 100%;
+  max-width: 1200px;  
+}
+
+.place-name-container {
+  padding-left: 5px;
+  width: 100%;
+  font-family: 'Pribambas';
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-color: #b9dc0c;
+  margin-bottom: 5px; 
+}
+
+.forecast-wrapper {
+  overflow: hidden;
+  display: grid;  
+  margin: 0 10px;    
+  min-height: 90%;
+  box-shadow: 2px 5px 14px 1px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.forecast-block {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  padding: 0 10px;
+}
+
+.date-container {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pribambas';
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: #383a3c;
+}
+
+.container {
+  text-align: center;
+  font-family: 'Pribambas';
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.time {
+  text-decoration: underline;
+  text-decoration-color: #b9dc0c;
+}
+
+.weather {
+  border-bottom: 1px solid #383a3c;
+}
+
+.up-footer {
+  width: 100%;
+  background-color: #2A2A2A;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.up-footer-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.down-footer {
+  width: 100%;
+  background-color: #1D1D1D;
+  height: 50%; 
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Pribambas';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+
+.down-footer-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-social-media {
+  height: 50px;
+  width: 50px;
+}
+
+.btn-footer {
+  background-color: transparent;
+  color: #9BA1A1;
+  border: none;
+  transition: all;
+  transition-duration: 500ms;
+  text-align: center;
+  font-family: 'Pribambas';
+  padding: 10px;
+}
+
+.btn-footer:hover {
+  color: #b9dc0c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .forecast-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .content-wrapper-current-weather {
+    height: 95%;
+  }
+}
+
+
+
+

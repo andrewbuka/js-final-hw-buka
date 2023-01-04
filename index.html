@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet">
+  <title>Pogoda-shmagoda</title>
+</head>
+<body class="body">
+  <div class="blur-window"></div>
+
+  <div class="question-form-container">
+    <p class="question-text">your city?</p>
+    <form class="question-form">
+      <input type="search" autofocus class="question-input">
+      <button class="question-btn">ok</button>
+    </form>
+  </div>
+
+  <header class="header">    
+    <div class="up-header-container">
+      <div class="up-header-content">
+        <div class="logo-container">         
+          <p class="logo">pogoda-shmagoda</p>
+        </div>
+
+        <nav class="navigation">
+          <div class="btn-current-container checked">
+            <button class="curretn-weather-btn btn-header">Current weather</button>
+          </div> 
+          <div class="btn-forecast-container">
+            <button class="weather-forecast-btn btn-header">Weather forecast</button>
+          </div>  
+        </nav>
+      </div>        
+    </div>
+
+    <div class="down-header-container">
+      <div class="down-header-content">
+        <form id="form" class="form">
+          <input type="search" class="input" id="search-input" placeholder="Search">
+          <button class="button-submit" type="submit">OK</button>
+        </form>
+      </div>
+    </div>   
+  </header>
+
+  <main class="main">
+    <div class="down-content"></div>
+
+    <div class="content-container current-weather">
+      <div class="content-wrapper content-wrapper-current-weather">
+        <div class="content">
+          <div class="up-content">
+            <div class="date-box">
+              <div class="date"></div>
+              <div class="time"></div>
+            </div>
+          </div>
+          <div class="middle-content">
+            <div class="middle-content-box">
+              <div class="svg-box">
+                <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+              </div>
+              <div class="place"></div>
+            </div>
+            <div class="middle-content-box">
+              <div class="svg-box">
+                <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-thermometer-half"
+                  viewBox="0 0 16 16">
+                  <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415z" /><path
+                  d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
+                </svg>
+              </div>
+              <div class="temperature"></div>              
+            </div>
+
+            <div class="middle-content-box feels-like"></div>
+            <div class="middle-content-box humidity"></div>
+            <div class="middle-content-box pressure"></div>
+            <div class="middle-content-box visibility"></div>
+            <div class="middle-content-box wind-speed"></div>
+            <div class="middle-content-box">
+              <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cloudy-fill"
+                viewBox="0 0 16 16">
+                <path d="M13.405 7.027a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 13H13a3 3 0 0 0 .405-5.973z" />
+              </svg>
+              <div class="cloudy"></div>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-container weather-forecast none">
+      <div class="content-wrapper">        
+        <div class="content-forecast">
+          <div class="place-name-btn-container">
+            <div class="place-name-container"></div>           
+          </div>
+
+          <div class="forecast-wrapper">
+            <div class="forecast-block">
+              <div class="date-container date-container-first-day"></div>
+              <div class="forecast-container-first-day"></div>
+            </div>
+
+            <div class="forecast-block">
+              <div class="date-container date-container-second-day"></div>
+              <div class="forecast-container-second-day"></div>
+            </div>
+
+            <div class="forecast-block">
+              <div class="date-container date-container-third-day"></div>
+              <div class="forecast-container-third-day"></div>
+            </div>
+
+            <div class="forecast-block">
+              <div class="date-container date-container-forth-day"></div>
+              <div class="forecast-container-forth-day"></div>
+            </div>
+
+            <div class="forecast-block">
+              <div class="date-container date-container-fifth-day"></div>
+              <div class="forecast-container-fifth-day"></div>
+            </div> 
+          </div>            
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">    
+    <div class="up-footer">
+      <div class="up-footer-wrapper">
+        <div class="logo">pogoda-shmagoda</div>
+
+        <div class="social-media">
+          <a href="#" class="logo-link">
+            <img src="images/social-media/twitter.png" alt="twiter logo" class="logo-social-media">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/social-media/instagram.png" alt="instagram logo" class="logo-social-media">
+          </a>
+           <a href="#" class="logo-link">
+             <img src="images/social-media/youtube.png" alt="youtube logo" class="logo-social-media">
+           </a>
+           <a href="#" class="logo-link">
+             <img src="images/social-media/facebook.png" alt="facebook logo" class="logo-social-media">
+           </a>
+            <a href="#" class="logo-link">
+              <img src="images/social-media/tiktok.png" alt="tiktok logo" class="logo-social-media">
+            </a>    
+        </div>
+      </div>
+    </div>
+
+    <div class="down-footer">
+      <div class="down-footer-wrapper">
+        <nav class="navigation">
+          <div class="btn-current-container checked">
+            <button class="curretn-weather-btn btn-footer">Current weather</button>
+          </div>
+          <div class="btn-forecast-container">
+            <button class="weather-forecast-btn btn-footer">Weather forecast</button>
+          </div>
+        </nav>
+
+        <div class="logo-container">          
+          <p class="logo">© pogoda-shmagoda</p>
+        </div>
+
+      </div>       
+    </div>      
+  </footer>
+
+    <script src="extra/elementCreation.js" defer></script>
+    <script src="extra/function.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>
